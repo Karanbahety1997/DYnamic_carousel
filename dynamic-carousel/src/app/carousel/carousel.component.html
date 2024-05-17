@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="left-side">
+      <h2>WelcomeTo!</h2><br>
+      <h1>SGCGIS</h1>
+    </div>
+    <div class="right-side">
+      <div class="carousel">
+        <div class="carousel-inner" [style.transform]="'translateX(' + translateValue + '%)'">
+          <div class="carousel-item" *ngFor="let item of items">
+            <img class="carousel-image" [src]="item.imageUrl" alt="Carousel Image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

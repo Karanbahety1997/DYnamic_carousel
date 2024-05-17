@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  
+    .left-side,
+    .right-side {
+      width: 50%;
+      overflow: hidden; /* Hide overflow to prevent vertical scrolling */
+    }
+  
+    .left-side {
+        display: flex;
+        flex-direction: column; /* Stack flex items vertically */
+        text-align: center;
+        border: 2px solid black;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        background-color: palevioletred;
+      }
+      
+  
+    .right-side {
+      display: flex;
+      flex-direction: column; /* Adjust container height based on content */
+      position: relative;
+    }
+  
+    .carousel {
+      flex: 1; /* Ensure the carousel takes up remaining space */
+      overflow: hidden;
+      position: relative;
+    }
+  
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.7s ease;
+    }
+  
+    .carousel-item {
+      flex: 0 0 auto;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .carousel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the image covers the entire area */
+    }
+  
+    .carousel-content {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+  
+    h2, h1 {
+      margin: 0; /* Remove default margin */
+    }
+  }
+  
